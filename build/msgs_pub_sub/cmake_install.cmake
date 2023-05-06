@@ -52,3 +52,11 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/msgs_pub_sub" TYPE FILE FILES "/home/ros/demo02_ws/src/msgs_pub_sub/package.xml")
 endif()
 
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/msgs_pub_sub" TYPE PROGRAM FILES "/home/ros/demo02_ws/build/msgs_pub_sub/catkin_generated/installspace/demo02_pub.py")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/msgs_pub_sub" TYPE PROGRAM FILES "/home/ros/demo02_ws/build/msgs_pub_sub/catkin_generated/installspace/demo02_sub.py")
+endif()
+
