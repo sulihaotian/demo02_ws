@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(msgs_pub_sub_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT " " STREQUAL " ")
+if(NOT "/home/ros/demo02_ws/devel/include " STREQUAL " ")
   set(msgs_pub_sub_INCLUDE_DIRS "")
-  set(_include_dirs "")
+  set(_include_dirs "/home/ros/demo02_ws/devel/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -177,7 +177,7 @@ foreach(library ${libraries})
   endif()
 endforeach()
 
-set(msgs_pub_sub_EXPORTED_TARGETS "")
+set(msgs_pub_sub_EXPORTED_TARGETS "msgs_pub_sub_generate_messages_cpp;msgs_pub_sub_generate_messages_eus;msgs_pub_sub_generate_messages_lisp;msgs_pub_sub_generate_messages_nodejs;msgs_pub_sub_generate_messages_py")
 # create dummy targets for exported code generation targets to make life of users easier
 foreach(t ${msgs_pub_sub_EXPORTED_TARGETS})
   if(NOT TARGET ${t})
@@ -185,7 +185,7 @@ foreach(t ${msgs_pub_sub_EXPORTED_TARGETS})
   endif()
 endforeach()
 
-set(depends "")
+set(depends "roscpp;rospy;std_msgs;message_runtime")
 foreach(depend ${depends})
   string(REPLACE " " ";" depend_list ${depend})
   # the package name of the dependency must be kept in a unique variable so that it is not overwritten in recursive calls
@@ -214,7 +214,7 @@ foreach(depend ${depends})
   _list_append_deduplicate(msgs_pub_sub_EXPORTED_TARGETS ${${msgs_pub_sub_dep}_EXPORTED_TARGETS})
 endforeach()
 
-set(pkg_cfg_extras "")
+set(pkg_cfg_extras "msgs_pub_sub-msg-extras.cmake")
 foreach(extra ${pkg_cfg_extras})
   if(NOT IS_ABSOLUTE ${extra})
     set(extra ${msgs_pub_sub_DIR}/${extra})

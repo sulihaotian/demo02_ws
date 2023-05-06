@@ -3,6 +3,6 @@ prefix=/home/ros/demo02_ws/devel
 Name: msgs_pub_sub
 Description: Description of msgs_pub_sub
 Version: 0.0.0
-Cflags: 
+Cflags: -I/home/ros/demo02_ws/devel/include
 Libs: -L${prefix}/lib 
-Requires: 
+Requires: roscpp rospy std_msgs message_runtime
