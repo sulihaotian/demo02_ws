@@ -31,7 +31,7 @@ if __name__ == "__main__":
     #2.初始化 ROS 节点:命名(唯一)
     rospy.init_node("listener_p")
     #3.实例化 订阅者 对象
-    sub = rospy.Subscriber("chatter",String,doMsg,queue_size=10)
+    sub = rospy.Subscriber("chatter2",String,doMsg,queue_size=10)
     #4.处理订阅的消息(回调函数)
     #5.设置循环调用回调函数
     rospy.spin()
