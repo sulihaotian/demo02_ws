@@ -1,0 +1,8 @@
+prefix=/home/ros/demo02_ws/install
+
+Name: msgs_pub_sub
+Description: Description of msgs_pub_sub
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
