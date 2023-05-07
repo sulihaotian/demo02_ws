@@ -136,6 +136,7 @@ include_directories(
 add_executable(demo01_pub src/demo01_pub.cpp)
 add_executable(demo01_sub src/demo01_sub.cpp)
 add_executable(demo03_pub_person src/demo03_pub_person.cpp)
+add_executable(demo03_sub_person src/demo03_sub_person.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -157,7 +158,9 @@ target_link_libraries(demo01_sub
 target_link_libraries(demo03_pub_person
   ${catkin_LIBRARIES}
 )
-
+target_link_libraries(demo03_sub_person
+  ${catkin_LIBRARIES}
+)
 #############
 ## Install ##
 #############
@@ -169,10 +172,9 @@ target_link_libraries(demo03_pub_person
 # in contrast to setup.py, you can choose the destination
 catkin_install_python(PROGRAMS
   scripts/demo02_pub.py
-  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-)
-catkin_install_python(PROGRAMS
   scripts/demo02_sub.py
+  scripts/demo04_pub.py
+  scripts/demo04_sub.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 

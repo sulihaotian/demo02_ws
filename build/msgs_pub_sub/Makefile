@@ -168,6 +168,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+msgs_pub_sub/CMakeFiles/demo03_sub_person.dir/rule:
+	cd /home/ros/demo02_ws/build && $(MAKE) -f CMakeFiles/Makefile2 msgs_pub_sub/CMakeFiles/demo03_sub_person.dir/rule
+.PHONY : msgs_pub_sub/CMakeFiles/demo03_sub_person.dir/rule
+
+# Convenience name for target.
+demo03_sub_person: msgs_pub_sub/CMakeFiles/demo03_sub_person.dir/rule
+
+.PHONY : demo03_sub_person
+
+# fast build rule for target.
+demo03_sub_person/fast:
+	cd /home/ros/demo02_ws/build && $(MAKE) -f msgs_pub_sub/CMakeFiles/demo03_sub_person.dir/build.make msgs_pub_sub/CMakeFiles/demo03_sub_person.dir/build
+.PHONY : demo03_sub_person/fast
+
+# Convenience name for target.
 msgs_pub_sub/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
 	cd /home/ros/demo02_ws/build && $(MAKE) -f CMakeFiles/Makefile2 msgs_pub_sub/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
 .PHONY : msgs_pub_sub/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
@@ -698,6 +713,33 @@ src/demo03_pub_person.cpp.s:
 	cd /home/ros/demo02_ws/build && $(MAKE) -f msgs_pub_sub/CMakeFiles/demo03_pub_person.dir/build.make msgs_pub_sub/CMakeFiles/demo03_pub_person.dir/src/demo03_pub_person.cpp.s
 .PHONY : src/demo03_pub_person.cpp.s
 
+src/demo03_sub_person.o: src/demo03_sub_person.cpp.o
+
+.PHONY : src/demo03_sub_person.o
+
+# target to build an object file
+src/demo03_sub_person.cpp.o:
+	cd /home/ros/demo02_ws/build && $(MAKE) -f msgs_pub_sub/CMakeFiles/demo03_sub_person.dir/build.make msgs_pub_sub/CMakeFiles/demo03_sub_person.dir/src/demo03_sub_person.cpp.o
+.PHONY : src/demo03_sub_person.cpp.o
+
+src/demo03_sub_person.i: src/demo03_sub_person.cpp.i
+
+.PHONY : src/demo03_sub_person.i
+
+# target to preprocess a source file
+src/demo03_sub_person.cpp.i:
+	cd /home/ros/demo02_ws/build && $(MAKE) -f msgs_pub_sub/CMakeFiles/demo03_sub_person.dir/build.make msgs_pub_sub/CMakeFiles/demo03_sub_person.dir/src/demo03_sub_person.cpp.i
+.PHONY : src/demo03_sub_person.cpp.i
+
+src/demo03_sub_person.s: src/demo03_sub_person.cpp.s
+
+.PHONY : src/demo03_sub_person.s
+
+# target to generate assembly for a file
+src/demo03_sub_person.cpp.s:
+	cd /home/ros/demo02_ws/build && $(MAKE) -f msgs_pub_sub/CMakeFiles/demo03_sub_person.dir/build.make msgs_pub_sub/CMakeFiles/demo03_sub_person.dir/src/demo03_sub_person.cpp.s
+.PHONY : src/demo03_sub_person.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -708,6 +750,7 @@ help:
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... edit_cache"
+	@echo "... demo03_sub_person"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_cpp"
@@ -750,6 +793,9 @@ help:
 	@echo "... src/demo03_pub_person.o"
 	@echo "... src/demo03_pub_person.i"
 	@echo "... src/demo03_pub_person.s"
+	@echo "... src/demo03_sub_person.o"
+	@echo "... src/demo03_sub_person.i"
+	@echo "... src/demo03_sub_person.s"
 .PHONY : help
 
 

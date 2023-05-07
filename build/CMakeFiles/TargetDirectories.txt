@@ -39,6 +39,7 @@
 /home/ros/demo02_ws/build/msgs_pub_sub/CMakeFiles/install.dir
 /home/ros/demo02_ws/build/msgs_pub_sub/CMakeFiles/list_install_components.dir
 /home/ros/demo02_ws/build/msgs_pub_sub/CMakeFiles/edit_cache.dir
+/home/ros/demo02_ws/build/msgs_pub_sub/CMakeFiles/demo03_sub_person.dir
 /home/ros/demo02_ws/build/msgs_pub_sub/CMakeFiles/roscpp_generate_messages_lisp.dir
 /home/ros/demo02_ws/build/msgs_pub_sub/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir
 /home/ros/demo02_ws/build/msgs_pub_sub/CMakeFiles/std_msgs_generate_messages_cpp.dir

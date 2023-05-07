@@ -285,6 +285,19 @@ gtest/fast:
 .PHONY : gtest/fast
 
 #=============================================================================
+# Target rules for targets named demo03_sub_person
+
+# Build rule for target.
+demo03_sub_person: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 demo03_sub_person
+.PHONY : demo03_sub_person
+
+# fast build rule for target.
+demo03_sub_person/fast:
+	$(MAKE) -f msgs_pub_sub/CMakeFiles/demo03_sub_person.dir/build.make msgs_pub_sub/CMakeFiles/demo03_sub_person.dir/build
+.PHONY : demo03_sub_person/fast
+
+#=============================================================================
 # Target rules for targets named roscpp_generate_messages_lisp
 
 # Build rule for target.
@@ -696,6 +709,7 @@ help:
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
+	@echo "... demo03_sub_person"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_cpp"
